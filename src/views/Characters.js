@@ -39,7 +39,10 @@ export default class Characters extends React.Component {
             />
           </div>
           <div className="col col--65">
-            <FilmContainer films={this.state.films} activeCharacter={this.state.character}/>
+            <FilmContainer
+              films={this.state.films}
+              activeCharacter={this.state.character}
+            />
           </div>
         </div>
       </div>
