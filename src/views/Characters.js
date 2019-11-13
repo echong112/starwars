@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import FilmContainer from '../components/FilmContainer/FilmContainer';
 import CharacterPicker from '../components/CharacterPicker/CharacterPicker';
 import Loading from '../components/Loading/Loading';
+import Scroller from '../components/Scroller/Scroller';
 
 export default class Characters extends React.Component {
   constructor(props){
@@ -12,7 +13,8 @@ export default class Characters extends React.Component {
         name: 'No Character Selected'
       },
       films: null,
-      isLoading: false
+      isLoading: false,
+      isModalOpen: true
     }
   }
 
@@ -47,10 +49,22 @@ export default class Characters extends React.Component {
       });
   }
 
+  closeModal = () => {
+    this.setState({isModalOpen: !this.state.isModalOpen});
+  }
 
   render() {
     return (
       <div>
+        <div className="scroller-close">
+          <button onClick={this.closeModal}>{this.state.isModalOpen ? 'Close' : 'Open Scroller'}</button>
+        </div>
+        {this.state.isModalOpen ? 
+          <div className="scroller-container">
+            <Scroller />
+          </div> :
+          ''
+        }
         <div className="container">
           <Header />
         </div>

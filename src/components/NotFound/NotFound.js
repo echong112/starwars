@@ -4,7 +4,7 @@ export default class NotFound extends React.Component {
   render() {
     return (
       <div>
-        <h3>Not found. But I find your lack of faith is disturbing....</h3>
+        <h3>Nothing found. But I find your lack of faith disturbing....</h3>
       </div>
     );
   }
