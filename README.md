@@ -1,7 +1,9 @@
-## Enrique Solo's Coding Challenge 
 # Star Wars Character Picker
+## Enrique Solo's Coding Challenge 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Demo
+[http://enriquechong-static-html.s3-website-us-east-1.amazonaws.com/starwars/](Demo Link on S3)
 ## Available Scripts
 
 In the project directory, you can run:
