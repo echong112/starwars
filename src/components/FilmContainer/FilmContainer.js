@@ -6,25 +6,14 @@ import './FilmContainer.scss';
 export default class FilmContainer extends React.Component {
 
   render() {
-    if (this.props.films !== null) {
-      return (
-        <div className="film-container">
-          <h4>Movies: </h4>
-            {this.props.films && this.props.films.map((film, i) => {
-              return (
-                <Film film={film} key={i} />
-              );
-            })}
-        </div>
-      );
-
-    } else {
-      return (
-        <div className="film-container">
-          <h4>Movies: </h4>
-          <NotFound />
-        </div>
-      );
-    }
+    return (
+      <div className="film-container">
+        <h4>Movies: </h4>
+          {this.props.films && this.props.films.map((film, i) => {
+            return <Film film={film} key={i} />
+          })}
+          {this.props.activeCharacter.url && this.props.films === null ? <NotFound /> : ''}
+      </div>
+    );
   }
 }

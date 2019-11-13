@@ -11,7 +11,7 @@ export default class Characters extends React.Component {
       character: {
         name: 'No Character Selected'
       },
-      films: [],
+      films: null,
       isLoading: false
     }
   }
@@ -69,7 +69,6 @@ export default class Characters extends React.Component {
                 <FilmContainer
                 films={this.state.films}
                 activeCharacter={this.state.character}
-                onIsLoading={this.state.isLoading}
               />
             }
           </div>
