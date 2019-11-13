@@ -18,14 +18,13 @@ export default class FilmContainer extends React.Component {
         </div>
       );
 
-    } else if (this.props.films === null) {
+    } else {
       return (
         <div className="film-container">
           <h4>Movies: </h4>
           <NotFound />
         </div>
       );
-      
     }
   }
 }
