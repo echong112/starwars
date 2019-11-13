@@ -16,14 +16,30 @@ export default class Characters extends React.Component {
 
   setActive = (character) => {
     this.setState({character: character});
+    this.setState({films: []});
     this.fetchFilms(character);
   }
 
   fetchFilms = (character) => {
     fetch(character.url)
       .then(response => response.json())
-      .then(data => this.setState({ films: data.films }));
+      .then(data => {
+        let films = data.films;
+        if (films !== undefined) {
+          films.forEach(film => {
+            fetch(film)
+              .then(response => response.json())
+              .then(data => {
+                let count = this.state.films;
+                count.push(data);
+                this.setState({films: count});
+              })
+          })
+        }
+
+      });
   }
+
 
   render() {
     return (

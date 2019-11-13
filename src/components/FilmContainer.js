@@ -3,6 +3,10 @@ import Film from './Film/Film';
 import NotFound from './NotFound/NotFound';
 
 export default class FilmContainer extends React.Component {
+
+  componentDidMount() {
+    console.log('mounted');
+  }
   render() {
     if (this.props.films === undefined) {
       return <NotFound />
