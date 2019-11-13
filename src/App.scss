@@ -3,10 +3,10 @@
   margin: auto;
   width: 100%;
   display: flex;
+  border: red 1px dotted;
 }
 
 .col {
-  border: red 1px dotted;
   
   &--35 {
     width: 35%;

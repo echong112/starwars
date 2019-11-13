@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
 import FilmContainer from '../components/FilmContainer';
-import CharacterPicker from '../components/CharacterPicker';
+import CharacterPicker from '../components/CharacterPicker/CharacterPicker';
 
 export default class Characters extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       character: {
-        name: ''
+        name: 'No Character Selected'
       },
       films: []
     }
@@ -33,11 +33,13 @@ export default class Characters extends React.Component {
         </div>
         <div className="container">
           <div className="col col--35">
-            <h1>{this.state.character.name}</h1>
-            <CharacterPicker onSetActive={this.setActive}/>
+            <CharacterPicker
+              onSetActive={this.setActive}
+              activeCharacter={this.state.character}
+            />
           </div>
           <div className="col col--65">
-            <FilmContainer films={this.state.films} />
+            <FilmContainer films={this.state.films} activeCharacter={this.state.character}/>
           </div>
         </div>
       </div>

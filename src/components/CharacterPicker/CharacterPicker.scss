@@ -1,0 +1,13 @@
+.character-button {
+  width: 100%;
+  padding: 15px 0;
+  background: red;
+  font-size: 25px;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    background: blue;
+    color: white;
+    font-weight: bold;
+  }
+}

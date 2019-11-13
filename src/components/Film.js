@@ -19,11 +19,9 @@ export default class Film extends React.Component {
 
   render() {
     if (this.state.film) {
-      let film = this.state.film;
-      console.log(film);
       return (
         <div>
-          <h1>{film.title}</h1>
+          <h1>{this.state.film.title}</h1>
         </div>
       );
     }

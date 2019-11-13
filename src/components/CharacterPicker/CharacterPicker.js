@@ -1,5 +1,6 @@
 import React from 'react';
-import characters from '../assets/characters.json';
+import characters from '../../assets/characters.json';
+import './CharacterPicker.scss';
 
 export default class Characters extends React.Component {
   constructor(props){
@@ -22,7 +23,9 @@ export default class Characters extends React.Component {
         {characters.characters && characters.characters.map((character, i) => {
           return (
             <div key={i}>
-              <button onClick={this.setActive.bind(this, character)}>{character.name}</button>
+              <button
+                className={`character-button ${this.props.activeCharacter.name === character.name ? 'active' : ''}`}
+                onClick={this.setActive.bind(this, character)}>{character.name}</button>
             </div>
           );
         })}
