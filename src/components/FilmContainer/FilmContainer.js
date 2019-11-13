@@ -9,6 +9,7 @@ export default class FilmContainer extends React.Component {
     if (this.props.films !== null) {
       return (
         <div className="film-container">
+          <h4>Movies: </h4>
             {this.props.films && this.props.films.map((film, i) => {
               return (
                 <Film film={film} key={i} />
@@ -18,7 +19,13 @@ export default class FilmContainer extends React.Component {
       );
 
     } else if (this.props.films === null) {
-      return <NotFound />
+      return (
+        <div className="film-container">
+          <h4>Movies: </h4>
+          <NotFound />
+        </div>
+      );
+      
     }
   }
 }

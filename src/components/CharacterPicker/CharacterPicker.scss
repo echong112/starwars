@@ -14,3 +14,10 @@
     font-weight: bold;
   }
 }
+
+.character-picker {
+  & > h4 {
+    text-align: center;
+    color: white;
+  }
+}

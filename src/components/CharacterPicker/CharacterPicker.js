@@ -20,6 +20,7 @@ export default class Characters extends React.Component {
   render() {
     return (
       <div className="character-picker">
+        <h4>Pick Character</h4>
         {characters.characters && characters.characters.map((character, i) => {
           return (
             <div key={i}>
