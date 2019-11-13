@@ -2,7 +2,7 @@
 ## Enrique Solo's Coding Challenge 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Demo on S3](https://www.enriquechong.com/starwars/)
+[Demo](https://www.enriquechong.com/starwars/)
 ## Available Scripts
 
 In the project directory, you can run:
