@@ -1,0 +1,11 @@
+.film {
+  border-bottom: #FFE81F 1px solid;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  & > p {
+    color: white;
+  }
+}

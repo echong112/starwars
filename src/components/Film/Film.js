@@ -1,17 +1,18 @@
 import React from 'react';
 import Loading from '../Loading/Loading';
 import './Film.scss';
+import { formatMDY } from '../../utils.js';
+
 
 export default class Film extends React.Component {
   render() {
     if (this.props.film) {
       return (
-        <div>
-          <h4>{this.props.film.title}</h4>
+        <div className="film">
+          <h3>{this.props.film.title}</h3>
           <p>{`Directed By ${this.props.film.director}`}</p>
-          <p>{`Produced By ${this.props.film.producer}`}</p>
-          <p>{`Release Date: ${this.props.film.release_date}`}</p>
-          <p>{`Release Date: ${this.props.film.episode_id}`}</p>
+          <p>{`Release Date: ${formatMDY(this.props.film.release_date)}`}</p>
+          <p>{`Episode # ${this.props.film.episode_id}`}</p>
         </div>
       );
     }
