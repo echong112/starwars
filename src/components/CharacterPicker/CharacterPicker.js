@@ -25,6 +25,7 @@ export default class Characters extends React.Component {
           return (
             <div key={i}>
               <button
+                disabled={this.props.onIsLoading}
                 className={`character-button ${this.props.activeCharacter.name === character.name ? 'active' : ''}`}
                 onClick={this.setActive.bind(this, character)}>{character.name}</button>
             </div>

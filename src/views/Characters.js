@@ -59,6 +59,7 @@ export default class Characters extends React.Component {
             <CharacterPicker
               onSetActive={this.setActive}
               activeCharacter={this.state.character}
+              onIsLoading={this.state.isLoading}
             />
           </div>
           <div className="col col--65">
@@ -68,6 +69,7 @@ export default class Characters extends React.Component {
                 <FilmContainer
                 films={this.state.films}
                 activeCharacter={this.state.character}
+                onIsLoading={this.state.isLoading}
               />
             }
           </div>
