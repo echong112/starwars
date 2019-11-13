@@ -1,5 +1,5 @@
 import React from 'react';
-import loading from '../../assets/img/loading-gif-transparent-25.gif';
+import loading from '../../assets/img/loading.gif';
 import './Loading.scss'
 
 export default class Loading extends React.Component {
