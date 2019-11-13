@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import FilmContainer from '../components/FilmContainer';
 import CharacterPicker from '../components/CharacterPicker/CharacterPicker';
 import Loading from '../components/Loading/Loading';
@@ -54,7 +54,7 @@ export default class Characters extends React.Component {
         <div className="container">
           <Header />
         </div>
-        <div className="container">
+        <div className="container container--main">
           <div className="col col--35">
             <CharacterPicker
               onSetActive={this.setActive}

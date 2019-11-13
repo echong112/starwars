@@ -1,13 +1,14 @@
 .character-button {
   width: 100%;
   padding: 15px 0;
-  background: red;
+  background: black;
   font-size: 25px;
+  color: white;
   cursor: pointer;
   &:hover,
   &.active {
-    background: blue;
-    color: white;
+    background: white;
+    color: black;
     font-weight: bold;
   }
 }
