@@ -1,5 +1,5 @@
 import React from 'react';
-import Film from './Film';
+import Film from './Film/Film';
 import NotFound from './NotFound/NotFound';
 
 export default class FilmContainer extends React.Component {

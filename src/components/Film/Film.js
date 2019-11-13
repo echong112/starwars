@@ -1,5 +1,6 @@
 import React from 'react';
-import Loading from './Loading';
+import Loading from '../Loading';
+import './Film.scss';
 
 export default class Film extends React.Component {
   constructor(props){
@@ -21,7 +22,11 @@ export default class Film extends React.Component {
     if (this.state.film) {
       return (
         <div>
-          <h1>{this.state.film.title}</h1>
+          <h4>{this.state.film.title}</h4>
+          <p>{`Directed By ${this.state.film.director}`}</p>
+          <p>{`Produced By ${this.state.film.producer}`}</p>
+          <p>{`Release Date: ${this.state.film.release_date}`}</p>
+          <p>{`Release Date: ${this.state.film.episode_id}`}</p>
         </div>
       );
     }
