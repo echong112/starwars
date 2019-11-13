@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Demo
-[http://enriquechong-static-html.s3-website-us-east-1.amazonaws.com/starwars/](Demo Link on S3)
+[Demo on S3](http://enriquechong-static-html.s3-website-us-east-1.amazonaws.com/starwars/)
 ## Available Scripts
 
 In the project directory, you can run:
