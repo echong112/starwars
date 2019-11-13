@@ -54,7 +54,7 @@ export default class Characters extends React.Component {
         <div className="container">
           <Header />
         </div>
-        <div className="container">
+        <div className="container container--flex-column">
           <div className="col col--35">
             <CharacterPicker
               onSetActive={this.setActive}

@@ -4,19 +4,38 @@
   width: 100%;
   display: flex;
 
+  &--flex-column {
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .col {
   border: #FFE81F 3px solid;
   border-top: none;
+
   &--35 {
     width: 35%;
+    @media only screen and (max-width: 768px) {
+      width: auto;
+      flex-basis: 100%;
+    }
   }
 
   &--65 {
     width: 65%;
     border-left: none;
+    @media only screen and (max-width: 768px) {
+      flex-basis: 100%;
+      width: auto;
+      border: #FFE81F 3px solid;
+    }
   }
+  @media only screen and (max-width: 768px) {
+  }
+
 }
 
 
