@@ -22,7 +22,7 @@ export default class Characters extends React.Component {
         {characters.characters && characters.characters.map((character, i) => {
           return (
             <div key={i}>
-              <a onClick={this.setActive.bind(this, character)}>{character.name}</a>
+              <button onClick={this.setActive.bind(this, character)}>{character.name}</button>
             </div>
           );
         })}

@@ -27,11 +27,19 @@ export default class Characters extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <Header />
-        <CharacterPicker onSetActive={this.setActive}/>
-        <h1>{this.state.character.name}</h1>
-        <FilmContainer films={this.state.films} />
+      <div>
+        <div className="container">
+          <Header />
+        </div>
+        <div className="container">
+          <div className="col col--35">
+            <h1>{this.state.character.name}</h1>
+            <CharacterPicker onSetActive={this.setActive}/>
+          </div>
+          <div className="col col--65">
+            <FilmContainer films={this.state.films} />
+          </div>
+        </div>
       </div>
     );
   }

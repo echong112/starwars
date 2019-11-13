@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Characters from './views/Characters.js';
 
 function App() {
