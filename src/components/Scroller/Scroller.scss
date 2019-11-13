@@ -16,19 +16,23 @@
   font-family:sans-serif;
   text-justify: inter-word;
 
-  
   @media only screen and (max-width: 768px) {
     font-size:50px;
-
   }
 }
 .scroll-h1 {
   font-size: 150px;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    font-size:75px;
+  }
 }
 .scroll-h3 {
   font-size: 75px;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    font-size:35px;
+  }
 }
 #target>div{
   padding-top:3500px;
