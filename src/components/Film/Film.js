@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../Loading';
+import Loading from '../Loading/Loading';
 import './Film.scss';
 
 export default class Film extends React.Component {

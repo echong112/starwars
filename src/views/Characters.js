@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import FilmContainer from '../components/FilmContainer';
 import CharacterPicker from '../components/CharacterPicker/CharacterPicker';
+import Loading from '../components/Loading/Loading';
 
 export default class Characters extends React.Component {
   constructor(props){
@@ -10,11 +11,13 @@ export default class Characters extends React.Component {
       character: {
         name: 'No Character Selected'
       },
-      films: []
+      films: [],
+      isLoading: false
     }
   }
 
   setActive = (character) => {
+    this.setState({isLoading: true});
     this.setState({character: character});
     this.setState({films: []});
     this.fetchFilms(character);
@@ -35,8 +38,12 @@ export default class Characters extends React.Component {
                 this.setState({films: count});
               })
           })
+        } else {
+          this.setState({films: null});
         }
-
+      })
+      .finally(() => {
+        this.setState({isLoading: false});
       });
   }
 
@@ -55,10 +62,14 @@ export default class Characters extends React.Component {
             />
           </div>
           <div className="col col--65">
-            <FilmContainer
-              films={this.state.films}
-              activeCharacter={this.state.character}
-            />
+            {
+              this.state.isLoading ?
+                <Loading /> :
+                <FilmContainer
+                films={this.state.films}
+                activeCharacter={this.state.character}
+              />
+            }
           </div>
         </div>
       </div>

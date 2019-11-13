@@ -4,21 +4,20 @@ import NotFound from './NotFound/NotFound';
 
 export default class FilmContainer extends React.Component {
 
-  componentDidMount() {
-    console.log('mounted');
-  }
   render() {
-    if (this.props.films === undefined) {
+    if (this.props.films !== null) {
+      return (
+        <div>
+            {this.props.films && this.props.films.map((film, i) => {
+              return (
+                <Film film={film} key={i} />
+              );
+            })}
+        </div>
+      );
+
+    } else if (this.props.films === null) {
       return <NotFound />
     }
-    return (
-      <div>
-          {this.props.films && this.props.films.map((film, i) => {
-            return (
-              <Film film={film} key={i} />
-            );
-          })}
-      </div>
-    );
   }
 }

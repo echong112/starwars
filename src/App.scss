@@ -3,7 +3,6 @@
   margin: auto;
   width: 100%;
   display: flex;
-  border: red 1px dotted;
 }
 
 .col {
@@ -15,4 +14,10 @@
   &--65 {
     width: 65%;
   }
+}
+
+
+body {
+  background: black;
+  color: white;
 }
