@@ -3,11 +3,12 @@
   padding: 15px 0;
   background: black;
   font-size: 25px;
-  color: white;
+  color: #FFE81F;
   cursor: pointer;
+  border: #FFE81F 1px solid;
   &:hover,
   &.active {
-    background: white;
+    background: #FFE81F;
     color: black;
     font-weight: bold;
   }

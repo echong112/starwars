@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header/Header';
-import FilmContainer from '../components/FilmContainer';
+import FilmContainer from '../components/FilmContainer/FilmContainer';
 import CharacterPicker from '../components/CharacterPicker/CharacterPicker';
 import Loading from '../components/Loading/Loading';
 
